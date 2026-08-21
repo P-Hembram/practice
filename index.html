@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f4f6f8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      /* Header */
+      .navbar {
+        width: 100%;
+        max-width: 800px;
+        background: white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        border: 1px solid #ccc;
+        text-align: center;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .brand {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      /* Layout Grid */
+      .container {
+        width: 100%;
+        max-width: 800px;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Desktop: 3 Columns */
+        gap: 20px;
+      }
+
+      /* Card Styling */
+      .card {
+        height: 110px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid #dcdcdc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        overflow: hidden;
+        padding: 10px;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .card img {
+        max-width: 70%;
+        max-height: 50px;
+        object-fit: contain;
+      }
+
+      /* Custom Card Styles */
+      .w3-card {
+        background-color: #04aa6d;
+        color: white;
+      }
+      .w3-logo {
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .js-card {
+        background-color: #f7df1e;
+        color: #000;
+        font-weight: bold;
+      }
+      .js-badge {
+        font-size: 32px;
+        font-weight: 900;
+      }
+
+      .django-card {
+        background-color: #0c4b33;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .ai-card {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: #00e5ff;
+        font-weight: bold;
+      }
+
+      .python-card {
+        background: #306998;
+        color: #ffe873;
+        font-weight: bold;
+      }
+
+      .mongo-card {
+        background: #13aa52;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .mysql-card {
+        background: #ffffff;
+      }
+
+      /* Mobile View Responsive Breakpoint */
+      @media (max-width: 768px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr); /* Mobile: 2 Columns */
+          gap: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="brand">My Website</div>
+    </header>
+
+    <main class="container">
+      <div class="grid-container">
+        <!-- Card 1: Table -->
+        <a href="https://www.google.com" target="_blank" class="card">
+          <img
+            src="img/tables.webp"
+            alt="Tables"
+          />
+        </a>
+
+        <!-- Card 2: Facebook -->
+        <a href="https://www.facebook.com" target="_blank" class="card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+            alt="Facebook"
+          />
+          <span>facebook</span>
+        </a>
+
+        <!-- Card 3: Instagram -->
+        <a href="https://www.instagram.com" target="_blank" class="card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+            alt="Instagram"
+          />
+        </a>
+
+        <!-- Card 4: W3Schools -->
+        <a
+          href="https://www.w3schools.com"
+          target="_blank"
+          class="card w3-card"
+        >
+          <div class="w3-logo">w3</div>
+          <div class="w3-text">w3schools.com</div>
+        </a>
+
+        <!-- Card 5: JavaScript -->
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          target="_blank"
+          class="card js-card"
+        >
+          <div class="js-badge">JS</div>
+          <span>JavaScript</span>
+        </a>
+
+        <!-- Card 6: Django -->
+        <a
+          href="https://www.djangoproject.com"
+          target="_blank"
+          class="card django-card"
+        >
+          <span>django</span>
+        </a>
+
+        <!-- Card 7: AI Concept -->
+        <a href="#" class="card ai-card">
+          <div class="ai-glow"></div>
+          <span>AI Tech</span>
+        </a>
+
+        <!-- Card 8: Python -->
+        <a
+          href="https://www.python.org"
+          target="_blank"
+          class="card python-card"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+            alt="Python"
+          />
+          <span>python</span>
+        </a>
+
+        <!-- Card 9: MongoDB -->
+        <a
+          href="https://www.mongodb.com"
+          target="_blank"
+          class="card mongo-card"
+        >
+          <span>mongoDB</span>
+        </a>
+
+        <!-- Card 10: MySQL (Mobile View) -->
+        <a href="https://www.mysql.com" target="_blank" class="card mysql-card">
+          <img
+            src="https://www.mysql.com/common/logos/logo-mysql-170x115.png"
+            alt="MySQL"
+          />
+        </a>
+      </div>
+    </main>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll(".card");
+
+        // Simple click animation feedback
+        cards.forEach((card) => {
+          card.addEventListener("click", () => {
+            card.style.transform = "scale(0.95)";
+            setTimeout(() => {
+              card.style.transform = "none";
+            }, 150);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
